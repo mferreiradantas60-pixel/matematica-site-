@@ -1,0 +1,506 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathePlus | Divisão de Frações</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7ff;
+  color: #172744;
+  line-height: 1.6;
+}
+
+header {
+  background: #101b32;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #7ca0ff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #7ca0ff;
+}
+
+.hero {
+  background: linear-gradient(120deg, #101b32, #253c68);
+  color: white;
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #7ca0ff;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  background: #527dff;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #365fe0;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 35px;
+  scroll-margin-top: 25px;
+}
+
+h2 {
+  color: #2445a4;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 23px;
+  border: 1px solid #d5e1fa;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px #203b7010;
+}
+
+.formula {
+  background: #edf3ff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  font-size: 23px;
+  color: #2445a4;
+  margin-top: 15px;
+}
+
+.example {
+  background: #f4f7ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.question {
+  padding: 15px;
+  margin: 15px 0;
+  background: #f4f7ff;
+  border-radius: 10px;
+}
+
+.question label {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 100px;
+  padding: 9px;
+  border: 1px solid #b9c9ed;
+  border-radius: 8px;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.correct {
+  color: #16804b;
+}
+
+.incorrect {
+  color: #c0392b;
+}
+
+.tip {
+  border-left: 4px solid #527dff;
+  padding: 10px 15px;
+  background: #edf3ff;
+  margin: 12px 0;
+}
+
+footer {
+  background: #101b32;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 45px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Mathe<span>Plus</span> ✦</div>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#teoria">Teoria</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#exercicios">Exercícios</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#dicas">Dicas</a>
+  </nav>
+</header>
+
+<div class="hero" id="inicio">
+  <h1>Divisão de <span>Frações</span></h1>
+  <p>
+    Aprenda matemática de um jeito simples e interativo!
+    Descubra a regra, acompanhe exemplos e teste seus conhecimentos.
+  </p>
+  <a href="#teoria" class="btn">Começar a aprender →</a>
+
+  <div class="formula">
+    a/b ÷ c/d = a/b × d/c
+  </div>
+</div>
+
+<main>
+
+<section id="teoria">
+  <h2>📘 Entenda a teoria</h2>
+
+  <div class="card">
+    <p>
+      A divisão de frações é uma operação matemática que permite
+      dividir uma fração por outra.
+    </p>
+
+    <h3>Qual é a regra?</h3>
+
+    <p>
+      Para dividir duas frações, conservamos a primeira,
+      trocamos a divisão por multiplicação e invertemos a segunda.
+    </p>
+
+    <div class="formula">
+      2/3 ÷ 4/5 = 2/3 × 5/4
+    </div>
+
+    <p>
+      Depois, multiplicamos os numeradores entre si e os
+      denominadores entre si.
+    </p>
+  </div>
+</section>
+
+<section id="exemplos">
+  <h2>💡 Exemplos resolvidos</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Exemplo 1</h3>
+      <div class="example">
+        <p>1. Operação inicial: 3/4 ÷ 2/5</p>
+        <p>2. Invertemos a segunda: 3/4 × 5/2</p>
+        <p>3. Multiplicamos: (3 × 5)/(4 × 2)</p>
+        <p><strong>Resultado: 15/8</strong></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Exemplo 2</h3>
+      <div class="example">
+        <p>1. Operação inicial: 2/3 ÷ 1/6</p>
+        <p>2. Invertemos a segunda: 2/3 × 6/1</p>
+        <p>3. Multiplicamos: 12/3</p>
+        <p><strong>Resultado: 4</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="exercicios">
+  <h2>✏️ Exercícios interativos</h2>
+
+  <div class="card">
+    <p>Resolva as operações e digite o resultado simplificado.</p>
+
+    <div class="question">
+      <p>1. Quanto é 5/6 ÷ 1/3?</p>
+      <input type="text" id="ex1" placeholder="Ex.: 5/2">
+      <button class="btn" onclick="verificarExercicio(1)">
+        Conferir
+      </button>
+      <div id="fb1" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>2. Quanto é 4/5 ÷ 2/3?</p>
+      <input type="text" id="ex2" placeholder="Ex.: 6/5">
+      <button class="btn" onclick="verificarExercicio(2)">
+        Conferir
+      </button>
+      <div id="fb2" class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p>3. Quanto é 3/7 ÷ 2/7?</p>
+      <input type="text" id="ex3" placeholder="Ex.: 3/2">
+      <button class="btn" onclick="verificarExercicio(3)">
+        Conferir
+      </button>
+      <div id="fb3" class="feedback"></div>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🎮 Quiz de matemática</h2>
+
+  <div class="card">
+    <p>Escolha a alternativa correta em cada pergunta.</p>
+
+    <div class="question">
+      <p><strong>1. O que devemos inverter na divisão de frações?</strong></p>
+      <label><input type="radio" name="q1" value="a"> A primeira fração</label>
+      <label><input type="radio" name="q1" value="b"> A segunda fração</label>
+      <label><input type="radio" name="q1" value="c"> As duas frações</label>
+    </div>
+
+    <div class="question">
+      <p><strong>2. Quanto é 1/2 ÷ 1/4?</strong></p>
+      <label><input type="radio" name="q2" value="a"> 1/8</label>
+      <label><input type="radio" name="q2" value="b"> 2</label>
+      <label><input type="radio" name="q2" value="c"> 1/6</label>
+    </div>
+
+    <div class="question">
+      <p><strong>3. Depois de inverter a segunda fração, devemos:</strong></p>
+      <label><input type="radio" name="q3" value="a"> Somar</label>
+      <label><input type="radio" name="q3" value="b"> Subtrair</label>
+      <label><input type="radio" name="q3" value="c"> Multiplicar</label>
+    </div>
+
+    <button class="btn" onclick="corrigirQuiz()">
+      Ver meu resultado
+    </button>
+
+    <button class="btn" onclick="reiniciarQuiz()">
+      Tentar novamente
+    </button>
+
+    <h3 id="resultadoQuiz" aria-live="polite"></h3>
+  </div>
+</section>
+
+<section id="dicas">
+  <h2>⭐ Dicas importantes</h2>
+
+  <div class="card">
+    <div class="tip">
+      <strong>1. Não confunda as regras!</strong>
+      <p>Na divisão, invertemos a segunda fração e multiplicamos.</p>
+    </div>
+
+    <div class="tip">
+      <strong>2. Simplifique o resultado.</strong>
+      <p>
+        Quando numerador e denominador têm um divisor comum,
+        simplifique a fração.
+      </p>
+    </div>
+
+    <div class="tip">
+      <strong>3. Atenção ao zero.</strong>
+      <p>
+        Não podemos dividir por zero. A fração usada como divisor
+        não pode ter valor igual a zero.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>📚 O que você aprendeu?</h2>
+  <div class="card">
+    <ul>
+      <li>Conservar a primeira fração.</li>
+      <li>Inverter a segunda fração.</li>
+      <li>Trocar a divisão por multiplicação.</li>
+      <li>Multiplicar numeradores e denominadores.</li>
+      <li>Simplificar o resultado quando possível.</li>
+    </ul>
+    <p><strong>Continue praticando. Você consegue!</strong></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>MathePlus</strong> — Aprenda hoje, conquiste amanhã.
+  <br>Projeto educativo de matemática © 2026
+</footer>
+
+<script>
+const exercicios = {
+  1: { resposta: 2.5, texto: "5/2" },
+  2: { resposta: 4/5 / (2/3), texto: "6/5" },
+  3: { resposta: 3/7 / (2/7), texto: "3/2" }
+};
+
+function verificarExercicio(numero) {
+  const campo = document.getElementById("ex" + numero);
+  const feedback = document.getElementById("fb" + numero);
+  const valor = campo.value.trim().replace(",", ".");
+  let numeroResposta;
+
+  if (valor.includes("/")) {
+    const partes = valor.split("/");
+    if (partes.length !== 2 ||
+        partes.some(p => p.trim() === "") ||
+        Number(partes[1]) === 0) {
+      feedback.textContent = "Digite uma fração válida, como 3/2.";
+      feedback.className = "feedback incorrect";
+      return;
+    }
+    numeroResposta = Number(partes[0]) / Number(partes[1]);
+  } else {
+    numeroResposta = Number(valor);
+  }
+
+  if (valor === "" || !Number.isFinite(numeroResposta)) {
+    feedback.textContent = "Digite uma resposta válida.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+
+  if (Math.abs(numeroResposta - exercicios[numero].resposta) < 0.000001) {
+    feedback.textContent = "Muito bem! Resposta correta: " +
+      exercicios[numero].texto + ".";
+    feedback.className = "feedback correct";
+  } else {
+    feedback.textContent =
+      "Ainda não! Lembre-se de inverter a segunda fração e multiplicar.";
+    feedback.className = "feedback incorrect";
+  }
+}
+
+function corrigirQuiz() {
+  const respostas = {
+    q1: "b",
+    q2: "b",
+    q3: "c"
+  };
+
+  let pontos = 0;
+  let respondidas = 0;
+
+  for (const pergunta in respostas) {
+    const selecionada = document.querySelector(
+      'input[name="' + pergunta + '"]:checked'
+    );
+
+    if (selecionada) {
+      respondidas++;
+      if (selecionada.value === respostas[pergunta]) {
+        pontos++;
+      }
+    }
+  }
+
+  const resultado = document.getElementById("resultadoQuiz");
+
+  if (respondidas < 3) {
+    resultado.textContent =
+      "Responda às 3 perguntas antes de conferir. Você respondeu " +
+      respondidas + " de 3.";
+    return;
+  }
+
+  resultado.textContent =
+    "Você acertou " + pontos + " de 3 questões! " +
+    (pontos === 3
+      ? "Excelente! Você dominou o conteúdo!"
+      : "Revise a teoria e tente novamente.");
+}
+
+function reiniciarQuiz() {
+  document.querySelectorAll('#quiz input[type="radio"]').forEach(
+    campo => campo.checked = false
+  );
+  document.getElementById("resultadoQuiz").textContent = "";
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
